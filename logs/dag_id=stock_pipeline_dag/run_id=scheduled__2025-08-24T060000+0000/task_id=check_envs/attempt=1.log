@@ -1,0 +1,17 @@
+[2025-08-24T07:00:01.939+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-08-24T07:00:02.066+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: stock_pipeline_dag.check_envs scheduled__2025-08-24T06:00:00+00:00 [queued]>
+[2025-08-24T07:00:02.091+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: stock_pipeline_dag.check_envs scheduled__2025-08-24T06:00:00+00:00 [queued]>
+[2025-08-24T07:00:02.093+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-08-24T07:00:02.152+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_envs> on 2025-08-24 06:00:00+00:00
+[2025-08-24T07:00:02.171+0000] {standard_task_runner.py:63} INFO - Started process 506 to run task
+[2025-08-24T07:00:02.183+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'stock_pipeline_dag', 'check_envs', 'scheduled__2025-08-24T06:00:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/stock_pipeline_dag.py', '--cfg-path', '/tmp/tmpflru5822']
+[2025-08-24T07:00:02.192+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask check_envs
+[2025-08-24T07:00:02.388+0000] {task_command.py:426} INFO - Running <TaskInstance: stock_pipeline_dag.check_envs scheduled__2025-08-24T06:00:00+00:00 [running]> on host 7d6ac7cec927
+[2025-08-24T07:00:02.701+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='stock_pipeline_dag' AIRFLOW_CTX_TASK_ID='check_envs' AIRFLOW_CTX_EXECUTION_DATE='2025-08-24T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-08-24T06:00:00+00:00'
+[2025-08-24T07:00:02.704+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-08-24T07:00:02.750+0000] {python.py:237} INFO - Done. Returned value was: True
+[2025-08-24T07:00:02.754+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-08-24T07:00:03.411+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=stock_pipeline_dag, task_id=check_envs, run_id=scheduled__2025-08-24T06:00:00+00:00, execution_date=20250824T060000, start_date=20250824T070002, end_date=20250824T070003
+[2025-08-24T07:00:03.567+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-08-24T07:00:03.664+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-08-24T07:00:03.687+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
